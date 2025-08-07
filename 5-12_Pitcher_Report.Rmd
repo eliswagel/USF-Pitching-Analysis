@@ -1,0 +1,87 @@
+---
+title: "5/12 Game Report – Pitcher Analysis"
+author: "Eli Swagel"
+date: "`r format(Sys.Date())`"
+output: 
+  html_document:
+    self_contained: true
+---
+
+# 5/12 Game Report – Individual Pitcher Tables
+
+This report includes summary and hit data for individual pitchers from the 5/12 game.
+
+## Load Required Functions and Data
+
+```{r load-data}
+source("~/USF/Baseball_Functions.R")
+
+May12 <- read_csv("~/USF/20240512-BenedettiDiamond-1_unverified.csv")
+
+# Define pitcher name vectors from data
+usf_names <- get_usf_pitchers(May12)
+opposing_names <- get_opposing_pitchers(May12)
+
+# Generate umpire summaries
+usf_umpire_summary <- generate_umpire_summary(May12, usf_names, "USF Umpire Report")
+opposing_umpire_summary <- generate_umpire_summary(May12, opposing_names, "Opponent Umpire Report")
+
+# Display the plots and summary tables
+usf_umpire_summary$report_plot
+usf_umpire_summary$summary_table
+
+opposing_umpire_summary$report_plot
+opposing_umpire_summary$summary_table
+
+```
+
+
+
+```{r usf-pitcher-report, echo=FALSE, results='asis'}
+library(knitr)
+
+# Get the list of USF pitcher names as a character vector
+usf_pitchers <- get_usf_pitchers(May12)
+
+# Loop through each pitcher
+for (pitcher in usf_pitchers) {
+  
+  # Print the Pitcher section title (second-level header)
+  cat("## Pitcher:", pitcher, "\n\n")
+  
+  # Print text header for Overview section
+  cat("### Overview\n\n")
+  print(generate_pitcher_summary(May12, pitcher)$summary_1)
+  
+  # Print text header for Summary Statistics section
+  cat("\n\n### Summary Statistics\n\n")
+  print(generate_pitcher_summary(May12, pitcher)$summary_table)
+  
+  # Print text header for Hit Pitches section
+  cat("\n\n### Hit Pitches\n\n")
+  print(generate_formatted_hit_table(May12, pitcher))
+  
+  # Add a horizontal rule separator
+  cat("\n\n---\n\n")
+}
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(htmltools)
+
+output <- list()
+
+for (pitcher in usf_pitchers) {
+  plots <- interactive_heatmaps_updated(May12, pitcher)
+  
+  section <- tagList(
+    tags$h2(paste("Pitcher:", pitcher)),
+    plots
+  )
+  
+  output <- append(output, list(section))
+}
+
+browsable(tagList(output))
+```
