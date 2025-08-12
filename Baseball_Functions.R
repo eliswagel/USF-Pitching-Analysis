@@ -65,7 +65,7 @@ gt_theme_base <- function(gt_tbl) {
       )
     ) %>%
     gt::tab_style(
-      style = gt::cell_text(size = 20, align = "center"),
+      style = gt::cell_text(size = 20, align = "center", weight = "bold"),
       locations = gt::cells_body()
     )
 }
@@ -380,5 +380,18 @@ generate_interactive_heatmaps <- function(df) {
   })
 
   browsable(tagList(sections))
+}
+
+generate_full_report <- function(file_path) {
+  # Load your baseball functions
+  source("~/Desktop/USF/Baseball_Functions.R")
+  
+  # Read CSV into a dataframe
+  df <- readr::read_csv(file_path)
+  
+  # Run the three report functions
+  generate_umpire_summaries(df)
+  generate_summary_statistics_tables(df)
+  generate_interactive_heatmaps(df)
 }
 

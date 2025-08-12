@@ -15,14 +15,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-
 ```{r echo=FALSE}
 source("~/Desktop/USF/Baseball_Functions.R")
-May12 <- read_csv("20240512-BenedettiDiamond-1_unverified.csv")
-```
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-generate_umpire_summaries(May12)
-generate_summary_statistics_tables(May12)
-generate_interactive_heatmaps(May12)
+generate_full_report("20240512-BenedettiDiamond-1_unverified.csv")
 ```
