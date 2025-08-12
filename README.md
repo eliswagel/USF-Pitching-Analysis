@@ -70,3 +70,8 @@ When knitting to HTML, all sections are compiled into one self-contained, intera
 - Works best with pitch tracking datasets containing detailed pitch location and movement data.
 - Built for modularity — all plotting and table functions can be reused in other analysis scripts.
 - The `Baseball_Functions.R` script can be integrated into other R projects for customized baseball data analysis.
+
+## View Example Report
+
+You can view an example HTML report here:  
+[**View Example Report**](https://eliswagel.github.io/USF-Pitching-Analysis/Game_Report_Template.html)
