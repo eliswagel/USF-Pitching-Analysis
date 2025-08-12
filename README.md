@@ -24,9 +24,6 @@ The analysis is fully automated — running one command or knitting the R Markdo
 - **`data/`** *(optional)*  
   Directory for storing raw game CSV files (pitch-level tracking data).
 
-- **`docs/images/`** *(optional)*  
-  Example output images for use in this README.
-
 ## Requirements
 
 Install the following R packages before running:
@@ -68,11 +65,6 @@ Install the following R packages before running:
 - **Interactive Heatmaps**: Clickable pitch location visualizations.
 
 When knitting to HTML, all sections are compiled into one self-contained, interactive file.
-
-## Example Output
-
-![Umpire Report Example](docs/images/umpire_report_example.png)  
-![Interactive Heatmap Example](docs/images/heatmap_example.png)
 
 ## Notes
 - Works best with pitch tracking datasets containing detailed pitch location and movement data.
