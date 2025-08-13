@@ -74,6 +74,5 @@ When knitting to HTML, all sections are compiled into one self-contained, intera
 ## View Example Report
 
 You can view an example HTML report here:  
-[**View Example Report**](https://eliswagel.github.io/USF-Pitching-Analysis/Game_Report_Template.html)
 
 
