@@ -35,41 +35,27 @@ Install the following R packages before running:
 
 ## Usage
 
-### 1. Prepare Your Data
-- Save the pitch-level tracking CSV for your game into the `data/` folder (or any accessible location).
-- Ensure the dataset contains the required columns:
-  - Pitcher name
-  - Pitch call type
-  - Plate location coordinates (`PlateLocSide`, `PlateLocHeight`)
-  - Pitch characteristics (e.g., `RelSpeed`, `SpinRate`, `InducedVertBreak`)
+You can generate the report from either the R Markdown template or the R console.
 
-### 2. Generate a Report
+### Quick start (recommended)
+1) **Get data**  
+   - Use our sample: [`data/20240512-BenedettiDiamond-1_unverified.csv`](data/20240512-BenedettiDiamond-1_unverified.csv)  
+   - Or use your own CSV of pitching data tha you want analyzed
 
-**Option A — Using R Markdown**
-1. Open `Game_Report_Template.Rmd` in RStudio.
-2. Set the file path to your game CSV in the YAML or setup chunk.
-3. Click **Knit to HTML** — this will generate the complete interactive report.
+2) **Open the template**  
+   - Open `Game_Report_Template.Rmd` in RStudio.  
+   - In the setup chunk, set the path to your CSV, for example:
+     ```r
+     data_path <- "data/20240512-BenedettiDiamond-1_unverified.csv"  # or your own file
+     ```
 
-**Option B — Using R Console**
-
-    # Load functions
-    source("Baseball_Functions.R")
-
-    # Run report generator
-    generate_full_report("data/my_game.csv")
-
-### 3. Output
-- **Umpire Report**: Strike zone plot + called ball/strike table.
-- **Pitcher Statistics**: Base and extended stats for each pitcher.
-- **Hit Tables**: Batted ball type, result, launch angle, exit velocity.
-- **Interactive Heatmaps**: Clickable pitch location visualizations.
-
-When knitting to HTML, all sections are compiled into one self-contained, interactive file.
-
-## Notes
-- Works best with pitch tracking datasets containing detailed pitch location and movement data.
-- Built for modularity — all plotting and table functions can be reused in other analysis scripts.
-- The `Baseball_Functions.R` script can be integrated into other R projects for customized baseball data analysis.
+3) **Knit**  
+   - Click **Knit** → **Knit to HTML**.  
+   - You’ll get a single interactive HTML file with:
+     - Umpire strike-zone plot + called ball/strike summary  
+     - Pitcher stats  
+     - Hit Pitch tables  
+     - Interactive pitch-location heatmaps
 
 ## View Example Report
 
