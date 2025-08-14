@@ -38,7 +38,7 @@ You can generate the report from either the R Markdown template or the R console
 
 1) **Get data**  
    - Use our sample: [`data/20240512-BenedettiDiamond-1_unverified.csv`](data/20240512-BenedettiDiamond-1_unverified.csv)  
-   - Or use your own CSV of pitching data tha you want analyzed
+   - Or use your own CSV of pitching data that you want analyzed
 
 2) **Open the template**  
    - Open `Game_Report_Template.Rmd` in RStudio.  
