@@ -9,7 +9,6 @@ The workflow uses a single dataset of pitch-level tracking data (CSV format) to 
 - **Pitcher Summary Tables**: Base and extended statistics (velocity, spin, break, approach angles, etc.).
 - **Hit Tables**: Batted ball details (hit type, result, launch angle, exit velocity).
 - **Interactive Plate Heatmaps**: Pitch-by-pitch visualizations using Plotly.
-- **Full-Game Reports**: Combined outputs in a clean, R Markdown-generated HTML file.
 
 The analysis is fully automated — running one command or knitting the R Markdown file will generate a complete report for the selected game.
 
@@ -37,7 +36,6 @@ Install the following R packages before running:
 
 You can generate the report from either the R Markdown template or the R console.
 
-### Quick start (recommended)
 1) **Get data**  
    - Use our sample: [`data/20240512-BenedettiDiamond-1_unverified.csv`](data/20240512-BenedettiDiamond-1_unverified.csv)  
    - Or use your own CSV of pitching data tha you want analyzed
