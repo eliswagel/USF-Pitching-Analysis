@@ -74,7 +74,7 @@ When knitting to HTML, all sections are compiled into one self-contained, intera
 ## View Example Report
 
 A sample CSV is provided so you can try the analysis without needing your own data.  
-[📥 Download sample_pitching_data.csv](data/sample_pitching_data.csv)
+[📥 Download Sample CSV](data/20240512-BenedettiDiamond-1_unverified.csv)
 
 You can view an example HTML report here:  
 [**View Example Report**](https://eliswagel.github.io/USF-Pitching-Analysis/Game_Report_Template.html)
