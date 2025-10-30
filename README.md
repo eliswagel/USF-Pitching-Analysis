@@ -1,8 +1,7 @@
 # USF Baseball Pitching Analysis
 
 ## Description
-From 2023–2024 I worked as an **Assistant Data Analyst** for the **University of San Francisco Men’s Baseball Team**, deriving insights from the team’s pitch-level tracking data.  
-This project automates pitcher analysis in **R**, producing interactive HTML reports that summarize performance through visual strike-zone charts, advanced pitch metrics, and batted-ball data.
+From 2023–2024 I worked as an **Assistant Data Analyst** for the **University of San Francisco Men’s Baseball Team**, deriving insights from the team’s pitch-level tracking data.  This project automates pitcher analysis in **R**, producing interactive HTML reports that summarize performance through visual strike-zone charts, advanced pitch metrics, and batted-ball data.
 
 ## Overview
 The workflow uses a single dataset of pitch-level tracking data (CSV format) to create:
