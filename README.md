@@ -58,7 +58,7 @@ You can generate the report from either the R Markdown template or the R console
 ## View Example Report
 
 A sample CSV is provided so you can try the analysis without needing your own data.  
-[Download Sample CSV](data/20240512-BenedettiDiamond-1_unverified.csv)
+[**Download Sample CSV**](data/20240512-BenedettiDiamond-1_unverified.csv)
 
 You can view an example HTML report here:  
 [**View Example Report**](https://eliswagel.github.io/USF-Pitching-Analysis/Game_Report_Template.html)
