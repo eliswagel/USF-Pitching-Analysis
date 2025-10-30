@@ -1,6 +1,6 @@
 # USF Baseball Pitching Analysis
 
-### Description
+## Description
 From 2023-2024 I worked as an Assistant Data Analyst for the University of San Francisco Mens Baseball Team. I was tasked with deriving valuable insights from the team's pitching data. Over the course of the year, I developed interactive visualitions and reports in R Studio, analyzing and displaying key summary statistics for USF Pitchers. 
 
 ## Overview
