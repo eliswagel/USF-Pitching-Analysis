@@ -1,24 +1,26 @@
 # USF Baseball Pitching Analysis
 
 ## Description
-From 2023-2024 I worked as an Assistant Data Analyst for the University of San Francisco Mens Baseball Team. I was tasked with deriving valuable insights from the team's pitching data. Over the course of the year, I developed interactive visualitions and reports in R Studio, analyzing and displaying key summary statistics for USF Pitchers. 
+From 2023–2024 I worked as an **Assistant Data Analyst** for the **University of San Francisco Men’s Baseball Team**, deriving insights from the team’s pitch-level tracking data.  
+This project automates pitcher analysis in **R**, producing interactive HTML reports that summarize performance through visual strike-zone charts, advanced pitch metrics, and batted-ball data.
 
 ## Overview
 The workflow uses a single dataset of pitch-level tracking data (CSV format) to create:
-- **Umpire Reports**: Visual strike zone plots and pitch call breakdown tables.
-- **Pitcher Summary Tables**: Base and extended statistics (velocity, spin, break, approach angles, etc.).
-- **Hit Tables**: Batted ball details (hit type, result, launch angle, exit velocity).
-- **Interactive Plate Heatmaps**: Pitch-by-pitch visualizations using Plotly.
 
-The analysis is fully automated — running one command or knitting the R Markdown file will generate a complete report for the selected game.
+- **Umpire Reports** – Visual strike zone plots and pitch call breakdown tables  
+- **Pitcher Summary Tables** – Base and extended metrics (velocity, spin, break, approach angles, etc.)  
+- **Hit Tables** – Batted-ball outcomes including hit type, result, launch angle, and exit velocity  
+- **Interactive Plate Heatmaps** – Pitch-by-pitch location visualizations built with Plotly  
+
+Running one command (or knitting the R Markdown file) generates a complete report for any selected game.
 
 ## File Structure
 
 - **`Baseball_Functions.R`**  
-  Contains reusable helper functions for data cleaning, statistical summaries, GT table formatting, and visualizations.
+  Reusable helper functions for data cleaning, statistical summaries, GT table formatting, and visualizations.
 
 - **`Game_Report_Template.Rmd`**  
-  R Markdown template that calls the helper functions to produce a complete pitcher report in HTML format.
+  R Markdown template that calls the helper functions to produce a full pitcher report in HTML format.
 
 - **`data/`** *(optional)*  
   Directory for storing raw game CSV files (pitch-level tracking data).
@@ -27,10 +29,12 @@ The analysis is fully automated — running one command or knitting the R Markdo
 
 Install the following R packages before running:
 
-    install.packages(c(
-      "tidyverse", "gt", "gtExtras", "ggplot2",
-      "plotly", "htmltools", "knitr", "readr"
-    ))
+```r
+install.packages(c(
+  "tidyverse", "gt", "gtExtras", "ggplot2",
+  "plotly", "htmltools", "knitr", "readr"
+))
+```
 
 ## Usage
 
