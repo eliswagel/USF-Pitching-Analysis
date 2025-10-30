@@ -3,8 +3,6 @@
 ### Description
 During my senior year of college, 2023-2024, I worked as an Assistant Data Analyst for the University of San Francisco Mens Baseball Team. I was tasked with deriving valuable insights from the team's pitching data. Over the course of the year, I developed interactive visualitions and reports in R Studio, analyzing and displaying key summary statistics for USF Pitchers. 
 
-This project automates the generation of **interactive baseball pitcher reports** using R, R Markdown, and advanced visualization libraries. It is designed for analyzing game-by-game pitching performance, producing **HTML reports** that include statistical summaries, strike zone visualizations, and interactive heatmaps.
-
 ## Overview
 The workflow uses a single dataset of pitch-level tracking data (CSV format) to create:
 - **Umpire Reports**: Visual strike zone plots and pitch call breakdown tables.
